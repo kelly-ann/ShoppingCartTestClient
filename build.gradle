@@ -20,7 +20,7 @@ repositories {
 }
 
 dependencies {
-	compile 'org.wildfly:wildfly-ejb-client-bom:10.0.0.Final'
+	compile 'org.wildfly:wildfly-ejb-client-bom:10.1.0.Final'
 	compile files ("../ShoppingCartServer/build/libs/shoppingcart.jar")
 	testCompile 'junit:junit:4.12'
 }

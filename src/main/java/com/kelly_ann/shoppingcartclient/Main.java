@@ -25,16 +25,15 @@ public class Main {
 		
 		// use JNDI to get an instance of the ShoppingCartSession
 		ShoppingCartSession shoppingCart = (ShoppingCartSession)jndiContext.lookup("shoppingcart/ShoppingCartSessionImpl!com.kelly_ann.shoppingcart.ShoppingCartSession");
-		
+
 		// add items to shopping cart
 		shoppingCart.addItem("Books");
 		shoppingCart.addItem("Laptop");
 		shoppingCart.addItem("Cell phone");
 		
-		
 		List<String> items = shoppingCart.getCartContents();
-		for(String c : items ) {
-			System.out.println(c.toString());
+		for(String item : items ) {
+			System.out.println(item.toString());
 		}
 		
 		shoppingCart.checkout();
